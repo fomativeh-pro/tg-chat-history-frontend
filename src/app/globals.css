@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+}
+
+.chat-list {
+  width: 30%;
+  border-right: 1px solid #ccc;
+}
+
+.chat-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.message-list {
+  width: 70%;
+  padding: 10px;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sender {
+  background-color: #e0f7fa;
+  align-self: flex-end;
+}
+
+.receiver {
+  background-color: #f1f8e9;
+  align-self: flex-start;
+}
