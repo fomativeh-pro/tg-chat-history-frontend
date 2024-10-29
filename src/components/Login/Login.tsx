@@ -103,8 +103,7 @@ const Login: React.FC<LoginProps> = ({ setPhoneNumber }) => {
 
       {phoneCode && (
         <p className="text-white text-center text-[14px] max-w-[300px] mt-[5px]">
-          If your account has a password set(2FA), enter it, or you won't be
-          able to login. Else, skip to sign-in.
+          {"If your account has a password set(2FA), enter it, or you won't be able to login. Else, skip to sign-in."}
         </p>
       )}
 

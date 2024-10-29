@@ -18,7 +18,7 @@ const ChatList: React.FC<ChatListProps> = ({ phoneNumber, onChatSelect }) => {
   const fetchChats = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_SERVER_URL+"/api/chats/" + `${phoneNumber}`
+        process.env.NEXT_PUBLIC_SERVER_URL + "/api/chats/" + `${phoneNumber}`
       );
       setChats(response.data.data); // Assuming response.data is an array of chats
       setErrorMessage("");
@@ -36,18 +36,20 @@ const ChatList: React.FC<ChatListProps> = ({ phoneNumber, onChatSelect }) => {
   return (
     <section className="w-full flex flex-col justify-start items-center">
       <section className="w-full flex flex-col justify-start items-center my-[20px]">
-      <h2 className="text-[22px] font-bold text-white my-[5px]">My Chats</h2>
-      <span className="font-medium text-red-300">Click a chat to view your messages</span>
+        <h2 className="text-[22px] font-bold text-white my-[5px]">My Chats</h2>
+        <span className="font-medium text-red-300">
+          Click a chat to view your messages
+        </span>
       </section>
-      
+
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <ul className="w-full bg-[#101f4a] p-[20px] flex flex-col justify-start items-center">
         {chats.length > 0 &&
-          chats.map((eachChat, id) => {
+          chats.map((eachChat, i) => {
             return (
               <li
-              className="rounded-[8px] p-[12px] bg-blue-500 text-white w-[90%] my-[10px] cursor-pointer"
-                key={eachChat.id}
+                className="rounded-[8px] p-[12px] bg-blue-500 text-white w-[90%] my-[10px] cursor-pointer"
+                key={i}
                 onClick={() => onChatSelect(eachChat.id)}
                 style={{ cursor: "pointer" }}
               >
@@ -56,9 +58,7 @@ const ChatList: React.FC<ChatListProps> = ({ phoneNumber, onChatSelect }) => {
             );
           })}
 
-          {chats.length==0 && (
-            <p className="text-white">Loading...</p>
-          )}
+        {chats.length == 0 && <p className="text-white">Loading...</p>}
       </ul>
     </section>
   );
