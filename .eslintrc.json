@@ -1,7 +1,3 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
-  "rules": {
-    // other rules...
-    "@typescript-eslint/no-explicit-any": "off" // Disable no-explicit-any rule
-  }
+  "extends": "next/core-web-vitals"
 }
