@@ -3,8 +3,17 @@ import React, { useState } from "react";
 import Login from "@/components/Login/Login";
 import ChatList from "@/components/ChatList/ChatList";
 import MyMessages from "@/components/MyMessages/MyMessages";
+import {
+  useViewport,
+  initClosingBehavior,
+} from "@tma.js/sdk-react";
 
 const App: React.FC = () => {
+  const [closingBehavior] = initClosingBehavior();
+  closingBehavior.enableConfirmation();
+  const viewport = useViewport();
+  viewport?.expand();
+
   // const [phoneNumber, setPhoneNumber] = useState<string>('+2348175276071');
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [chatId, setChatId] = useState<number | null>(null);
