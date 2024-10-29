@@ -50,7 +50,7 @@ const MyMessages: React.FC<MessagesProps> = ({
   }, [phoneNumber, chatId]);
 
   return (
-    <section className="w-full flex flex-col justify-start items-center pt-[60px]">
+    <section className="h-full w-full flex flex-col justify-start items-center pt-[60px]">
       {!loading && (
         <>
           <section className="fixed top-0 flex justify-center items-center h-[60px] max-w-[500px] bg-blue-800 w-full">

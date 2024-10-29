@@ -59,7 +59,7 @@ const Login: React.FC<LoginProps> = ({ setPhoneNumber }) => {
 
   return (
     <form
-      className="w-full max-w-[500px] flex flex-col justify-start items-center pb-[40px]"
+      className="h-full w-full max-w-[500px] flex flex-col justify-start items-center pb-[40px]"
       onSubmit={(e) => e.preventDefault()}
     >
       <h1 className="text-white font-bold text-[20px] mt-[20px] mb-[30px]">

@@ -24,7 +24,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="w-full max-w-[500px] flex justify-start items-center bg-blue-800 font-[Manrope]">
+    <main className="h-[100vh] w-full max-w-[500px] flex justify-start items-center bg-blue-800 font-[Manrope]">
       {!phoneNumber && <Login setPhoneNumber={setPhoneNumber} />}
       {phoneNumber && (
         <>

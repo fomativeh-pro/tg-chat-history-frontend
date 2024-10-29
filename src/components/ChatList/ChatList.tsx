@@ -34,7 +34,7 @@ const ChatList: React.FC<ChatListProps> = ({ phoneNumber, onChatSelect }) => {
   }, [phoneNumber]);
 
   return (
-    <section className="w-full flex flex-col justify-start items-center">
+    <section className="h-full w-full flex flex-col justify-start items-center">
       <section className="w-full flex flex-col justify-start items-center my-[20px]">
         <h2 className="text-[22px] font-bold text-white my-[5px]">My Chats</h2>
         <span className="font-medium text-red-300">
