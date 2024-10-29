@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SDKProvider } from "@tma.js/sdk-react";
 
 export const metadata: Metadata = {
   title: "Telegram chat history",
@@ -22,7 +23,10 @@ export default function RootLayout({
         />
       </head>
       <body className="flex justify-center items-center  bg-blue-950">
+        <SDKProvider>
         {children}
+
+        </SDKProvider>
       </body>
     </html>
   );
